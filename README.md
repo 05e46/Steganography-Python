@@ -1,4 +1,9 @@
-# Steganography-Python
+Steganography-Python
+---------------------
+Felipe Perez
+894698836
+Due Date: 10/31/2017
+
 Purpose: Hide a text inside an image
 Requirements: 
 -text embedded inside images
@@ -11,3 +16,7 @@ Requirements:
 -exports png image
 -extract text length from image
 -extract text from image
+
+Run Program:
+1.Open terminal
+2.run python "filename.py"
