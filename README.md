@@ -5,7 +5,9 @@ Felipe Perez
 Due Date: 10/31/2017
 
 Purpose: Hide a text inside an image
-Requirements: 
+
+Requirements
+--------------
 -text embedded inside images
 -converts text to binary
 -converts text length to binary
@@ -17,6 +19,10 @@ Requirements:
 -extract text length from image
 -extract text from image
 
-Run Program:
+Program Architecture
+---------------------
+
+Run Program
+-------------
 1.Open terminal
 2.run python "filename.py"
