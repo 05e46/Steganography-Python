@@ -4,7 +4,7 @@ Felipe Perez
 894698836
 Due Date: 10/31/2017
 
-Purpose: Hide a text inside an image
+Purpose: Hide a text inside an image and conform to the listed requirements
 
 Requirements
 --------------
