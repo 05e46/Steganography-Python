@@ -22,3 +22,10 @@ def writeText(text, imgSize):
 
 #method to encode text to image
 def encode(text2Code,'m3.jpg'):
+    #split the rbg values of image
+    img = Image.open('m3.jpg')
+    red = img.split()[0]
+    green = img.split()[1]
+    blue = img.split()[2]
+
+    
