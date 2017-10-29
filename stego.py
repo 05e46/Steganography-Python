@@ -1,5 +1,5 @@
 from PIL import Image, ImageFont, ImageDraw
-import textWrap
+
 
 #image object to work with
 #image1 = Image.open('m3.jpg')
@@ -21,11 +21,18 @@ def writeText(text, imgSize):
     Image.Draw(imageText)
 
 #method to encode text to image
-def encode(text2Code,'m3.jpg'):
+def encode(text2Code,ImgPic):
     #split the rbg values of image
     img = Image.open('m3.jpg')
     red = img.split()[0]
     green = img.split()[1]
     blue = img.split()[2]
 
-    
+def text2Binary(text):
+    test = 'test'
+    for letter in text:
+        print(ord(letter))
+
+
+if __name__ == "__main__":
+    text2Binary('felipe')
