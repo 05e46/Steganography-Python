@@ -1,7 +1,7 @@
-Steganography-Python
+
 ---------------------
 Felipe Perez
-894698836
+http://github.com/05e46/Steganography-Python
 Due Date: 10/31/2017
 
 Purpose: Hide a text inside an image and conform to the listed requirements
@@ -21,6 +21,7 @@ Requirements
 
 Program Architecture
 ---------------------
+
 
 Run Program
 -------------

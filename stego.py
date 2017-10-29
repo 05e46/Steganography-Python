@@ -35,4 +35,18 @@ def text2Binary(text):
 
 
 if __name__ == "__main__":
-    text2Binary('felipe')
+    #text2Binary('felipe')
+    import sys
+    import os
+
+    #option to encode the messsage to desired image
+    if sys.argv[1] == '-e':
+        message = sys.argv[2]
+        picture = Image.open(sys.argv[3])
+        encode(message,picture)
+        pic.save(sys.argv[4])
+
+    elif sys.arg[1] == '-d':
+        pic = Image.open(sys.argv[2])
+        message = decode(picture)
+        print message
