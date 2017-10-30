@@ -20,20 +20,56 @@ def writeText(text, imgSize):
 
     imageText = Image.new("RGB",imgSize)
     font = ImageFont.load_default().font
-    Image.Draw(imageText)
+    drawIT = Image.Draw(imageText)
 
 #method to convert text to binary
 def txt2Bin(textMessage):
     binary = bin(int(binascii.hexlify(message),16))
     return binary[2:]
 
+#method to convert text length to binary
+def len2Bin(textMessage):
+
+
 #method to encode text to image
 def encode(text2Code,ImgPic):
+    #check image compatibiilty
+    if ImgPic.mode!='RGB':
+        print('Image not compatible, choose another')
+        return false
+
     #split the rbg values
     img = Image.open('testImage.png')
     red = img.split()[0]
     green = img.split()[1]
     blue = img.split()[2]
+
+    xCoord = img.size[0]
+    yCoord = img.size[1]
+
+    imageTEXT = writeText(text2Code,img.size)
+    #convert to binary
+    back = text2Binary(text2Code)
+
+    #encode the text to the image
+    enc_image = Image.new("RBG",(xCoord,yCoord))
+    pixels = enc_image.load()
+    #filling in the pixels
+    for i in range(xCoord):
+        for j in range(yCoord):
+            r = bin(red.getpixel((i,j)))
+            b = bin(blue.getpixel((i,j)))
+            g = bin(green.getpixel((i,j)))
+
+            result = bin(enc_image.getpixel((i,j)))
+
+            if result[-1] == '1':
+                r = red[:-1] + '1'
+            else:
+                r = red[:-1] + '0'
+            pixels[i,j] = 
+
+
 
 """
 def text2Binary(text):
