@@ -26,4 +26,9 @@ Program Architecture
 Run Program
 -------------
 1.Open terminal
-2.run python "filename.py"
+2.run python "filename.py" with parameters (i.e: python stego.py -e 'hello' )
+
+Miscellaneous
+---------------
+Please ignore test.py file. Created to test single methods and learn python
+at the same time

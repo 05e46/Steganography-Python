@@ -1,5 +1,7 @@
 from PIL import Image, ImageFont, ImageDraw
-
+import sys
+import os
+import binascii
 
 #image object to work with
 #image1 = Image.open('m3.jpg')
@@ -20,32 +22,37 @@ def writeText(text, imgSize):
     font = ImageFont.load_default().font
     Image.Draw(imageText)
 
+#method to convert text to binary
+def txt2Bin(textMessage):
+    binary = bin(int(binascii.hexlify(message),16))
+    return binary[2:]
+
 #method to encode text to image
 def encode(text2Code,ImgPic):
-    #split the rbg values of image
-    img = Image.open('m3.jpg')
+    #split the rbg values
+    img = Image.open('testImage.png')
     red = img.split()[0]
     green = img.split()[1]
     blue = img.split()[2]
 
+"""
 def text2Binary(text):
     test = 'test'
     for letter in text:
         print(ord(letter))
-
+"""
 
 if __name__ == "__main__":
     #text2Binary('felipe')
-    import sys
-    import os
 
-    #option to encode the messsage to desired image
+    #option to encode the text to image
+    #what text to encode, what image to use, and where to save it
     if sys.argv[1] == '-e':
         message = sys.argv[2]
         picture = Image.open(sys.argv[3])
         encode(message,picture)
         pic.save(sys.argv[4])
-
+    #option to decode text from image
     elif sys.arg[1] == '-d':
         pic = Image.open(sys.argv[2])
         message = decode(picture)
