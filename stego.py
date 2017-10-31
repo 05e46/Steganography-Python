@@ -2,6 +2,7 @@ from PIL import Image, ImageFont, ImageDraw
 import sys
 import os
 import binascii
+import string
 
 #image object to work with
 #image1 = Image.open('m3.jpg')
@@ -53,26 +54,18 @@ def encode(text2Code,ImgPic):
     yCoord = img.size[1]
 
     imageTEXT = writeText(text2Code,img.size)
-    #convert to binary
-    back = text2Binary(text2Code)
 
-    #encode the text to the image
-    enc_image = Image.new("RBG",(xCoord,yCoord))
-    pixels = enc_image.load()
-    #filling in the pixels
-    for i in range(xCoord):
-        for j in range(yCoord):
+    #start on the 12 pixel in x axis
+    for i in range(xCoord+11):
+        for j in range(yCoord+0):
             r = bin(red.getpixel((i,j)))
             b = bin(blue.getpixel((i,j)))
             g = bin(green.getpixel((i,j)))
+            writing the text to image in binary
+            o1 = o1+(bin(r[i,j]))+(bin(b[i,j]))+(bin(g[i,j]))
 
-            result = bin(enc_image.getpixel((i,j)))
-
-            if result[-1] == '1':
-                r = red[:-1] + '1'
-            else:
-                r = red[:-1] + '0'
-            pixels[i,j] =
+            #save image to png type
+            output = img.save("decoded.png")
 
 #method to extract message from image
 def decode(picture_location):
@@ -92,13 +85,16 @@ def decode(picture_location):
     #test to print out size
     print(secret.size)
 
+    '''
     secret = Image.new("RGB",secret.size)
     pixels = secret.load()
-
-    for i in range(xAxis):
-        for j in range(yAxis):
-
-            return message
+    '''
+    #loop through the pixels to catch message
+    for i in range(xAxis+11):
+        for j in range(yAxis+0):
+            cat = cat+str([i,j])
+            #place pixels in array
+            hold[] = bin(cat)
 
 """
 def text2Binary(text):

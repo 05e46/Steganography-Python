@@ -21,7 +21,9 @@ Requirements
 
 Program Architecture
 ---------------------
-
+Running in Linux OS: Ubuntu 17.10
+           Python: 2.7
+           Pip: 9.0.1
 
 Run Program
 -------------
