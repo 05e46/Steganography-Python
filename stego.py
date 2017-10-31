@@ -12,7 +12,7 @@ import binascii
 image = Image.open('m3.jpg')
 fontType = ImageFont.truetype('arial.ttf',encoding='unic')
 draw = ImageDraw.Draw(image)
-draw.text(xy==(50,50),text='dont be a little bitch',fill=(255,60,0),font=fontType)
+draw.text(xy==(50,50),text='security is dope',fill=(255,60,0),font=fontType)
 image.show()
 """
 #method to write text to RGB image
@@ -29,7 +29,12 @@ def txt2Bin(textMessage):
 
 #method to convert text length to binary
 def len2Bin(textMessage):
-
+    out = (len(message))
+    s1 = 'Length of string is: '
+    print(s1 + str(out))
+    print('')
+    s2 = 'Binary text length is: '
+    print(s2 + bin(out))
 
 #method to encode text to image
 def encode(text2Code,ImgPic):
@@ -69,7 +74,31 @@ def encode(text2Code,ImgPic):
                 r = red[:-1] + '0'
             pixels[i,j] =
 
+#method to extract message from image
+def decode(picture_location):
+    #pull up image from directory
+    secret = Image.open(testImage.png)
+    #rotate the image from bottom right to top left format
+    secret2 = secret.rotate(180)
 
+    #get the rgb values
+    rojo = secret.split()[0]
+    azul = secret.split()[1]
+    verde = secret.split()[2]
+
+    #length and width of image
+    xAxis = secret.size[0]
+    yAxis = secret.size[1]
+    #test to print out size
+    print(secret.size)
+
+    secret = Image.new("RGB",secret.size)
+    pixels = secret.load()
+
+    for i in range(xAxis):
+        for j in range(yAxis):
+
+            return message
 
 """
 def text2Binary(text):
@@ -79,6 +108,7 @@ def text2Binary(text):
 """
 
 if __name__ == "__main__":
+    #sample string testing
     #text2Binary('felipe')
 
     #option to encode the text to image
@@ -93,3 +123,9 @@ if __name__ == "__main__":
         pic = Image.open(sys.argv[2])
         message = decode(picture)
         print message
+
+    #call method to print text to binary
+    txt2Bin(sys.argv[2])
+
+    #call method to print text length to binary
+    len2Bin(sys.argv[2])
