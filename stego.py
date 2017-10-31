@@ -67,7 +67,7 @@ def encode(text2Code,ImgPic):
                 r = red[:-1] + '1'
             else:
                 r = red[:-1] + '0'
-            pixels[i,j] = 
+            pixels[i,j] =
 
 
 

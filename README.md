@@ -26,7 +26,8 @@ Program Architecture
 Run Program
 -------------
 1.Open terminal
-2.run python "filename.py" with parameters (i.e: python stego.py -e 'hello' )
+2.run python "filename.py" with parameters (i.e: python stego.py -e 'hello' 'imagelocation' 'output to save to'
+3.run python "filename.py" with the methods called in main
 
 Miscellaneous
 ---------------
