@@ -95,7 +95,7 @@ def decode(picture_location):
             cat = cat+str([i,j])
             #place pixels in array
             hold[] = bin(cat)
-
+SE
 """
 def text2Binary(text):
     test = 'test'
